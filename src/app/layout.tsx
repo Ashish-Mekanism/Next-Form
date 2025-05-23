@@ -1,25 +1,24 @@
 "use client";
-import Nav from "@/components/Nav";
-import Footer from "@/components/footer";
+
 import { AnimatePresence, motion } from "framer-motion";
 const duration = 0.3;
 
 const variants = {
   initial: {
-    opacity: 0,
+    opacity: 0
   },
   enter: {
     opacity: 1,
     transition: {
       duration: duration,
       delay: duration,
-      when: "beforeChildren",
-    },
+      when: "beforeChildren"
+    }
   },
   exit: {
     opacity: 0,
-    transition: { duration: duration },
-  },
+    transition: { duration: duration }
+  }
 };
 
 // export const metadata: Metadata = {
@@ -28,7 +27,7 @@ const variants = {
 // };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {

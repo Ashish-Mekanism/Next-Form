@@ -1,0 +1,135 @@
+@import "../../sass/layout";
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  padding: 3rem 0;
+}
+
+.c-left {
+  p {
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+
+    span {
+      font-weight: bold;
+      color: black;
+    }
+
+    a {
+      color: $clr1;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $clr2;
+      }
+    }
+  }
+}
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+
+  .f-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    input {
+      width: 100%;
+      height: 40px;
+      padding: 1rem;
+      background-color: rgba($color: $clr1, $alpha: 0.05);
+      border: 1px solid rgba($color: $clr1, $alpha: 0.5);
+      color: black;
+      font-family: $font-pop;
+      border-radius: 30px;
+
+      &:focus {
+        outline: none;
+        border: 1.5px solid rgba($color: $clr1, $alpha: 0.7);
+      }
+    }
+  }
+  button {
+    width: 150px;
+    border: none;
+    background-color: $clr1;
+    font-size: 1.7rem;
+    border-radius: 50px;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active,
+    &:focus {
+      transform: scale(0.98);
+      outline: none;
+    }
+  }
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba($color: $clr1, $alpha: 0.05);
+    border: 1px solid rgba($color: $clr1, $alpha: 0.5);
+    color: black;
+    font-family: $font-pop;
+    border-radius: 30px;
+    &:focus {
+      outline: none;
+      border: 1.5px solid rgba($color: $clr1, $alpha: 0.7);
+    }
+  }
+}
+
+.c-right {
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 501px) {
+  .contact {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  .c-right {
+    iframe {
+      width: 100%;
+      height: 400px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .contact {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  .c-right {
+    iframe {
+      width: 100%;
+      height: 400px;
+    }
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+
+    button {
+      width: 100%;
+    }
+
+    .f-left {
+      height: 170px;
+    }
+  }
+}

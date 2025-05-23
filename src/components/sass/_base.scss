@@ -1,0 +1,63 @@
+@import "./vars";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-os;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: $clrf;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+html {
+  font-size: 10px;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: $clr1;
+  background: $clrg;
+}
+
+::selection {
+  color: $clr1;
+  background: $clrg;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  border-left: 1px solid black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $clr1;
+}
+
+.container {
+  width: 70vw;
+  margin: auto;
+}
+
+@media screen and (max-width: 1023px) and (min-width: 501px) {
+  .container {
+    width: 95vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 95vw;
+  }
+}
